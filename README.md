@@ -28,3 +28,8 @@ sim_out <- calc_similarity(params)
 
 The above example computes similarity for a site in South America (lon=-75.5, lat=3.2) with respect to the entire world. Climate data is from [WorldClim](http://worldclim.org), aggregated to 2 degrees, and reflects current climatic conditions (1979-2000). The similarity is computed based on both precipitation and average temperature, using the 12 months of the year.
 
+## Climate data to use this package
+We recommend that you use the following sources of climate data:
+* For current climate data, use [WorldClim](http://worldclim.org). They provide globally comprehensive interpolated surfaces of current (1970-2000) climates at high resolution. Check this [paper](https://doi.org/10.1002/joc.5086) for more information on WorldClim.
+* For future climate data, use the [CCAFS-Climate](http://ccafs-climate.org) data portal. CCAFS-Climate provides global high-resolution bias corrected data for all CMIP5 climate models and RCPs. Check this [paper](https://doi.org/10.1038/s41597-019-0343-8) for details.
+
