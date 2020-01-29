@@ -1,0 +1,11 @@
+Package: Analogues
+Type: Package
+Title: Identification of climate analogues
+Version: 3.0
+Date: 2020-01-29
+Author: David Arango Lodono, Edward Jones, Julian Ramirez-Villegas
+Maintainer: Julian Ramirez-Villegas <j.r.villegas@cgiar.org>
+Description: Uses gridded climate data to connect areas with similarity climates which may be spatially and/or temporally separated.
+License: GPL (>=2)
+Depends: raster, sp, stringr, grid
+Packaged: 2020-01-29 16:57:16 UTC; jrvillegas
