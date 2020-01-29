@@ -1,5 +1,5 @@
 # analogues
-This is the source code of the package analogues. The package is not on [CRAN](https://cran.r-project.org/web/packages/raster/index.html). The analogues package allows calculating climatic distances based on gridded climate data.
+This is the source code of the package analogues. The package is not on [CRAN](https://cran.r-project.org/web/packages/raster/index.html). The analogues package allows calculating climatic distances based on gridded climate data. The package was developed by [CCAFS](https://ccafs.cgiar.org).
 
 ## Installation
 To install this package you can do:
