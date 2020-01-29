@@ -1,6 +1,6 @@
-\name{Analogues-package}
-\alias{Analogues-package}
-\alias{Analogues}
+\name{analogues-package}
+\alias{analogues-package}
+\alias{analogues}
 \docType{package}
 \title{
 Identification of climate analogues

@@ -1,1 +1,7 @@
+importFrom("stats", "fft")
+importFrom("utils", "data")
+import("raster")
+import("grid")
+import("sp")
+import("stringr")
 exportPattern("^[[:alpha:]]+")
