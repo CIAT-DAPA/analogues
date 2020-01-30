@@ -8,11 +8,10 @@ similarity <-
         result[]=(training_targ[[i]][]-val_ref[[i]])^2
         result[]=sim_index(sqrt(result), params$vars[i])
         var_sim[,i]=result*params$weights[i]
-      }
-      else {
+      } else {
         res_month = matrix(nrow=ncell(training_targ[[i]]),ncol=12)
-        res_month[]=(t(t(training_targ[[i]][[params$growing.season]][])-val_ref[[i]][params$growing.season]))^2
-        result[]=sim_index(sqrt(rowMeans(res_month)), params$vars[i])
+        res_month[,params$growing.season]=(t(t(training_targ[[i]][[params$growing.season]][])-val_ref[[i]][params$growing.season]))^2
+        result[]=sim_index(sqrt(rowMeans(res_month,na.rm=T)), params$vars[i])
         var_sim[,i]=result*params$weights[i]
        }
     }
