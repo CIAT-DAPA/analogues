@@ -3,7 +3,7 @@
 .Rapp.history
 
 # R build ignore
-.Rbuidignore
+.Rbuildignore
 
 # Session Data files
 .RData
