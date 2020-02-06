@@ -57,3 +57,5 @@ mydata2 <- getCMIP5(var="prec", rcp=4.5, model=10, year=2030, res=0.5, lon=-75, 
 #plot month 6
 plot(mydata2[[6]])
 ```
+
+Also check the function ``getData`` from the package ``raster``. That function will allow you to directly download WorldClim data (1971-2000 climate conditions).
