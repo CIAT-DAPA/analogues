@@ -126,4 +126,4 @@ c(403L, 10L, -1190268930L, 1197236105L, -861210437L, 1602155658L,
 1747973334L, 1408263523L, -931655387L, -1622473022L, 1749967787L
 )
 
-if(getRversion() >= "2.15.1")  utils::globalVariables(c("sim_index_table"))
+if(getRversion() >= "2.15.1")  utils::globalVariables(c("sim_index_table","cmip5_table"))

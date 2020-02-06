@@ -39,3 +39,21 @@ We recommend that you use the following sources of climate data:
 * For current climate data, use [WorldClim](http://worldclim.org). They provide globally comprehensive interpolated surfaces of current (1970-2000) climates at high resolution. Check this [paper](https://doi.org/10.1002/joc.5086) for more information on WorldClim.
 * For future climate data, use the [CCAFS-Climate](http://ccafs-climate.org) data portal. CCAFS-Climate provides global high-resolution bias corrected data for all CMIP5 climate models and RCPs. Check this [paper](https://doi.org/10.1038/s41597-019-0343-8) for details.
 
+We have built a function to directly download CCAFS-climate data. If you wish to download these data directly from R, and then use it in the ``analogues`` R package, the below examples will help you understand how to do that.
+
+```r
+library(analogues)
+
+#download global future precipitation (monthly) for RCP 4.5, year 2030, at 10 arc-min spatial resolution
+mydata1 <- getCMIP5(var="prec", rcp=4.5, model=10, year=2030, res=10, path='.')
+
+#plot the 12 layers
+plot(mydata1)
+
+#download future precipitation (monthly) for RCP 4.5, year 2030, at 30 arc-sec spatial resolution
+#use lon,lat to specify a location within your area of interest. We will search the right data tile.
+mydata2 <- getCMIP5(var="prec", rcp=4.5, model=10, year=2030, res=0.5, lon=-75, lat=3, path='.')
+
+#plot month 6
+plot(mydata2[[6]])
+```
