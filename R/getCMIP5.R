@@ -26,7 +26,7 @@ getCMIP5 <- function(var, rcp, model, year, res, lon=NA, lat=NA, path='') {
   ####
   
   var <- tolower(var[1])
-  vars <- c('tmin', 'tmax', 'prec', 'bio')
+  vars <- c('tmin', 'tmax', 'tmean', 'prec', 'bio')
   stopifnot(var %in% vars)
   
   rcps <- c(2.6, 4.5, 6.0, 8.5)
