@@ -66,7 +66,11 @@ getCMIP5 <- function(var, rcp, model, year, res, lon=NA, lat=NA, path='') {
   }	
   utils::unzip(zipfile, exdir=dirname(zipfile))
   if (var == "bio") {nv <- 19} else {nv <- 12}
-  outstk <- raster::stack(paste(path, var, "_", 1:nv, ".asc", sep=""))
+  if (res == "30s") {
+    outstk <- raster::stack(paste(path, var, "_", ttile, "/", var, "_", 1:nv, ".asc", sep=""))
+  } else {
+    outstk <- raster::stack(paste(path, var, "_", 1:nv, ".asc", sep=""))
+  }
   return(outstk)
 }
 #x <- getCMIP5(var="prec", rcp=4.5, model=10, year=2030, res=0.5, lon=-75, lat=3, path='')
