@@ -31,7 +31,7 @@ getCMIP5 <- function(var, rcp, model, year, res, lon=NA, lat=NA, path='') {
   
   rcps <- c(2.6, 4.5, 6.0, 8.5)
   stopifnot(rcp %in% rcps)
-  rcp <- paste("rcp",gsub("\\.","\\_",rcp),sep="")
+  rcp <- paste("rcp",gsub("\\.","\\_",sprintf("%.1f", round(rcp,1))),sep="")
   stopifnot(year %in% c(2030, 2050, 2070, 2080))
   year <- paste(year,"s",sep="")
   
@@ -75,6 +75,7 @@ getCMIP5 <- function(var, rcp, model, year, res, lon=NA, lat=NA, path='') {
 }
 #x <- getCMIP5(var="prec", rcp=4.5, model=10, year=2030, res=0.5, lon=-75, lat=3, path='')
 
+#modified after raster package
 .download <- function(aurl, filename) {
   fn <- paste(tempfile(), '.download', sep='')
   res <- utils::download.file(url=aurl, destfile=fn, method="auto", quiet = FALSE, mode = "wb", cacheOK = TRUE)
