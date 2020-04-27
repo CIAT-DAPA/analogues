@@ -17,6 +17,7 @@ calc_similarity<-
       return(res)
     }
     simresult= wrapper()
+    names(simresult) <- params$fname
     if (params$writefile) writeRaster(simresult, paste(params$outfile, "/out_",params$fname,".tif", sep = ""), overwrite = TRUE)
     return(simresult)
   }
