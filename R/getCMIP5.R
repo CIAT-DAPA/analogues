@@ -15,7 +15,7 @@ getCMIP5 <- function(var, rcp, model, year, res, lon=NA, lat=NA, path='') {
   if (res == "30s") {
     lon <- min(180, max(-180, lon))
     lat <- min(90, max(-60, lat))
-    rs <- raster(nrows=3, ncols=5, xmn=-180, xmx=180, ymn=-60, ymx=90 )
+    rs <- raster(nrows=3, ncols=6, xmn=-180, xmx=180, ymn=-60, ymx=90 )
     row <- c("a","b","c")[rowFromY(rs, lat)]
     col <- colFromX(rs, lon)
     ttile <- paste(row,col,sep="")
