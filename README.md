@@ -5,6 +5,7 @@ This is the source code of the package analogues. The package is not on [CRAN](h
 To install this package you can do:
 
 ```r
+install.packages('devtools')
 library(devtools)
 install_github("CIAT-DAPA/analogues")
 ```
