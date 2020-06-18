@@ -9,6 +9,8 @@ library(devtools)
 install_github("CIAT-DAPA/analogues")
 ```
 
+If you do not have R package `devtools` installed then you will need to first run `install.packages(devtoools)` in your R console. You can also install `devtools` with the _install packages_ option of R Studio.
+
 ## Usage
 You can use this package to calculate climatic similarity between a reference site and a prescribed area (e.g. the entire globe). This helps identifying locations with similar climates for, for instance, agricultural technology transfer or germplasm exchange. The following code should get you started (also see package examples):
 
