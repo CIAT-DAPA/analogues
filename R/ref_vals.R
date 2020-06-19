@@ -8,8 +8,8 @@ function (params)
   }
   val_ref = list()
   for (i in 1:length(params$vars)) {
-    val_ref[[i]] = as.integer(extract(training_ref[[i]], 
-                                      cbind(params$x, params$y)))
+    val_ref[[i]] <- extract(training_ref[[i]], 
+                            cbind(params$x, params$y))
   }
   return(val_ref)
 }
